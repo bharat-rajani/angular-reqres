@@ -2,10 +2,11 @@
 
 Work in progress..
 
-Demo: 
-
 <p align="center">✨A demo angular app for learning the Angular, TypeScript using ReqRes REST Api which returns fake data.✨</p>
 
+Demo: 
+    https://bharat-rajani.github.io/angular-reqres/
+    
 <p align="center"><img src="screenshot.png"><br></p>
 
 ## Git Installation
