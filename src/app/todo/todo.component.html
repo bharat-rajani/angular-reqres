@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="jumbotron" style="padding:45px 0px">
+          <h4 class="text-center">TODO List App</h4>
+        </div>
+
+      <div class="input-group mb-3">
+          <input #itemTitle type="text" class="form-control" placeholder="Write your task" aria-label="write your task" aria-describedby="add_task" (keyup.enter)="onAdd(itemTitle)"
+          >
+          <div style="cursor: pointer;" class="hover-cursor input-group-append" (click)="onAdd(itemTitle)">
+            <i class="fa fa-plus-circle fa-1x input-group-text" id="add_task"></i>
+          </div>
+      </div>
+
+      <div class="mt-5" style="text-align:center;"><mat-spinner style="display: inline-block;" *ngIf="showSpinner"></mat-spinner></div>
+      
+      <div class="todo-list">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of todoListArray">
+            <span class="hover-cursor mr-1 px-1" [class.text-success]="item.isChecked" (click)="alterCheck(item.$key,item.isChecked)">
+              <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+            </span>
+            {{item.title}}
+            <span class="hover-cursor ml-1 px-1 text-danger pull-right" (click)="taskDelete(item.$key)">
+              <i class="fa fa-trash-o fa-lg"></i>
+            </span>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

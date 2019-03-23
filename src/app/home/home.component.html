@@ -1,8 +1,10 @@
-<h1>Users</h1>
-
-<ul *ngIf='users'>
-  <li *ngFor='let user of users.data'>
-    <img [src]="user.avatar">
-    <p>{{ user.first_name }} {{ user.last_name }}</p>
-  </li>
-</ul>
+<div class="container">
+  <h1>Users</h1>
+  <div class="mt-5" style="text-align:center;"><mat-spinner style="display: inline-block;" *ngIf="showSpinner"></mat-spinner></div>
+  <ul *ngIf='users'>
+    <li *ngFor='let user of users.data'>
+      <img [src]="user.avatar">
+      <p>{{ user.first_name }} {{ user.last_name }}</p>
+    </li>
+  </ul>
+</div>
