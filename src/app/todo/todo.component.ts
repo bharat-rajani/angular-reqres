@@ -34,7 +34,9 @@ export class TodoComponent implements OnInit {
   }
 
   onAdd(itemTitle){
-    this.todoService.addTitle(itemTitle.value);
+    if(itemTitle.value!=''){
+      this.todoService.addTitle(itemTitle.value);
+    }
     itemTitle.value=null;
   }
 
