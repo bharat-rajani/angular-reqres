@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'newApp'`, () => {
+  it(`should have as title 'angular-reqres'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('newApp');
+    expect(app.title).toEqual('angular-reqres');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to newApp!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-reqres!');
   });
 });
