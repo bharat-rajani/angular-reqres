@@ -22,8 +22,9 @@ export class TodoComponent implements OnInit {
         x['$key']=element.key;
         console.log(x);
         this.todoListArray.push(x);
-        this.showSpinner = false;
+
       })
+      this.showSpinner = false;
 
       this.todoListArray.sort((a,b)=>{
         return a.isChecked - b.isChecked;
